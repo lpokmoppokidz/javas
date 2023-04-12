@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="huhu.css">
+    <title>Đồng Hồ Bấm Giờ</title>
+</head>
+<form>
+    <input type="text" name="display" value="00:00:00">
+</form>
+<div class="form_over">
+    <span id="over_1" onmouseover="over_1('red')" onmouseout="out_1('blue')" onclick="start()">Start</span>
+    <span id="over_2" onmouseover="over_2('red')" onmouseout="out_2('blue')" onclick="stop()">Stop</span>
+    <span id="over_3" onmouseover="over_3('red')" onmouseout="out_3('blue')" onclick="reset()">Reset</span>
+</div>
+   
+ 
+
+<body>
+<script>
+var msec = 0
+var sec = 0
+var min = 0
+
+function start()
+{
+    document.forms[0].display.value= min + ":" + sec + ":" + msec
+    go = setTimeout("start()",1)
+    msec++
+}
+if(msec == 100){    
+    msec = 0
+    sec++
+}
+if(sec == 60){
+    sec = 0
+    min++
+}
+function stop()
+{
+    clearTimeout(go)
+}
+function reset()
+{
+    window.location.reload()
+}
+
+function over_1(test)
+{document.getElementById('over_1').style.background = test}
+function out_1(test)
+{document.getElementById('over_1').style.background = test}
+
+function over_2(test)
+{document.getElementById('over_2').style.background = test}
+function out_2(test)
+{document.getElementById('over_2').style.background = test}
+
+function over_3(test)
+{document.getElementById('over_3').style.background = test}
+function out_3(test)
+{document.getElementById('over_3').style.background = test}
+</script>
+</body>
+    
+    
+</html>

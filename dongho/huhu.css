@@ -1,0 +1,21 @@
+span
+{
+    cursor:pointer;
+    color: white;
+    background: red;
+    margin: 6px;
+  
+   
+}
+input{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid black;
+    border-radius: 2px;
+    background-color: rgb(167, 203, 67);
+}
+.form_over{
+    font-size: 35px;
+}
